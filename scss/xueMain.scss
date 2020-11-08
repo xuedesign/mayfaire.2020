@@ -1,0 +1,474 @@
+@charset "utf-8";
+/*-- Created By
+   ##############               ###############   
+    ##############             ###############    
+    ##############             ##############     
+     ##############           ##############      
+      ##############          #############       
+       #############         ##############       
+        #############       ##############        
+        ##############      #############         
+         ###############################          
+         ###############################          
+        #################################         
+        ##############     ##############         
+       ##############       ##############        
+       ##############        ##############       
+      ##############         #######           
+     ###############          ##############      
+     ##############           ###############     
+    ######      
+    ##############              ##############    
+   ##############               ##############
+          
+                 xuedesign studio 
+             https://www.xuedesign.tw/
+*
+* @project    Mayfaire International Official website
+* @Author     Tachimoma <hello@xuedesign.tw>
+* @copyright  2020 xuedesign studio
+* @version    v1.0 - 202011
+*
+**/
+
+
+/*
+=====================================
+reset重置
+=====================================
+*/
+@import url("reset.css");
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC:400&display=swap");
+@font-face {
+  font-family: SweiBowLegCJKtc-Regular;
+  src: url(https://cdn.jsdelivr.net/gh/max32002/swei-bow-leg@2.129/WebFont/CJK%20TC/SweiBowLegCJKtc-Regular.woff2) format("woff2")
+  , url(https://cdn.jsdelivr.net/gh/max32002/swei-bow-leg@2.129/WebFont/CJK%20TC/SweiBowLegCJKtc-Regular.woff) format("woff")}
+@import url("https://pro.fontawesome.com/releases/v5.15.1/css/all.css");
+
+/*
+=====================================s
+通用設定
+=====================================
+*/
+html{ 
+  font-size:62.5%; 
+  scroll-behavior: smooth;
+  border-top: 5px solid #7D6D58;}
+body{
+	margin: 0;
+	padding:0;
+  background: linear-gradient(180deg, rgb(220, 214, 210) 15%, rgba(220, 214, 210, 0));
+  background-attachment: fixed;
+  font-family:"Noto Sans TC", "Microsoft JhengHei","PingFangTC-Regular", "Arial", "Helvetica", sans-serif;
+  font-size: 1rem; /* 1rem=10px */
+  color:#333333}
+form{ margin:0; padding:0}
+image{border:0}
+.clean{ clear:both}
+.hidden{ display:none}
+
+/*頁面反白設定*/
+::selection { background: #7D6D58; color: #D8D9D4}
+::-moz-selection { background: #7D6D58; color: #D8D9D4}
+img::selection { background: transparent}
+img::-moz-selection { background: transparent}
+
+/*
+=====================================
+變數
+=====================================
+*/
+%test-border{
+  border: 1px solid #e1e1e1}
+%box_default{
+  display: block; 
+  width: 100%;
+  max-width: 1520px;
+  margin: 0 auto}
+
+
+/*
+=====================================
+網站站結構
+=====================================
+*/
+#wrap{
+  @extend %box_default;
+  border: 1px solid #111;
+}
+header,
+#hdr-fixed,
+footer{ display: block; width: 100%}
+
+
+
+/*
+=====================================
+頁面設定
+=====================================
+*/
+/*頁首*/
+
+
+
+/*版權列*/
+
+
+/*
+=====================================
+選單設定
+=====================================
+*/
+/*網站主選單*/
+
+
+/*行動版選單*/
+
+
+/*
+=====================================
+按鈕設定
+=====================================
+*/
+/*返回頂端*/
+#toTop{
+  display:none;
+  text-decoration:none;
+  position:fixed;
+  bottom:10px;
+  right:10px;
+  overflow:hidden;
+  width:51px;
+  height:51px;
+  border:none;
+  text-indent:100%;
+  background:url(../images/ui.totop.png) no-repeat left top}
+#toTopHover{
+  background:url(../images/ui.totop.png) no-repeat left -51px;
+  width:51px;
+  height:51px;
+  display:block;
+  overflow:hidden;
+  float:left;
+  opacity: 0;
+  -moz-opacity: 0;
+  filter:alpha(opacity=0)}
+#toTop:active, 
+#toTop:focus {
+  outline:none}
+
+.mybtn,
+.mybtn:visited{
+    display: block;
+    padding: 10px 5px;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 2.2rem;
+    letter-spacing: 1px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    background: linear-gradient(180deg, #37D0B4 0%, rgba(111, 135, 235, 0.8) 100%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    opacity: .8}
+.mybtn:hover{
+    opacity: 1;
+    text-decoration: none;
+    transition-duration: .5s}
+.btn-l{ 
+    width: 173px;
+    padding: 15px 10px}
+.btn-m{ 
+    width: 120px;
+    padding: 15px 10px}
+.btn-center{
+    margin: 30px auto}
+.btn-blue{
+    color: #5e98d4;
+    border-color: #5e98d4}
+.btn-white:hover,
+.btn-blue:hover{
+    color: #fff;
+    border-color: #0d4d80;
+    background: #126db4;
+    -webkit-transition: all 0.5s ease 0s;
+    /* 變動類別;動畫時間;動畫加速屬性;延遲發生時間 */
+    -moz-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;}
+
+@keyframes mousemove {
+    0%   { margin-top: 85px }
+    50%  { margin-top: 100px }
+    100% { margin-top: 84px }
+}
+@-webkit-keyframes mousemove {
+    0%   { margin-top: 85px }
+    50%  { margin-top: 100px }
+    100% { margin-top: 84px }
+}
+
+/*
+=====================================
+等待載入動畫
+=====================================
+*/
+#loading{
+    display:block;
+	max-width:100vw;
+	height:100vh;
+    background:#6F87EB}
+.spinner{
+    position: absolute;
+    top: 47%;
+    left: 50%;
+    z-index: 999;
+    margin: 0 -107px;
+    width: 207px;
+    height: 107px;
+    text-align: center}
+.spinner p{
+    font-size: 2rem;
+    line-height: 5rem;
+    color: #fff;
+    letter-spacing: 1px}
+@keyframes ld-bounce {
+  0%, 90% {
+    animation-timing-function: linear;
+  }
+  10% {
+    animation-timing-function: cubic-bezier(0, 0.4, 0.6, 1);
+  }
+  50% {
+    animation-timing-function: cubic-bezier(0.4, 0, 1, 0.6);
+  }
+  0% {
+    -webkit-transform: translate(0%, 30%) scaleY(0.5);
+    transform: translate(0%, 30%) scaleY(0.5);
+  }
+  10% {
+    -webkit-transform: translate(0%, 5%) scaleY(1.1);
+    transform: translate(0%, 5%) scaleY(1.1);
+  }
+  50% {
+    -webkit-transform: translate(0%, -37%) scaleY(1.1);
+    transform: translate(0%, -37%) scaleY(1.1);
+  }
+  90% {
+    -webkit-transform: translate(0%, 5%) scaleY(1.1);
+    transform: translate(0%, 5%) scaleY(1.1);
+  }
+  100% {
+    -webkit-transform: translate(0%, 30%) scaleY(0.5);
+    transform: translate(0%, 30%) scaleY(0.5);
+  }
+}
+@-webkit-keyframes ld-bounce {
+  0%, 90% {
+    animation-timing-function: linear;
+  }
+  10% {
+    animation-timing-function: cubic-bezier(0, 0.4, 0.6, 1);
+  }
+  50% {
+    animation-timing-function: cubic-bezier(0.4, 0, 1, 0.6);
+  }
+  0% {
+    -webkit-transform: translate(0%, 30%) scaleY(0.5);
+    transform: translate(0%, 30%) scaleY(0.5);
+  }
+  10% {
+    -webkit-transform: translate(0%, 5%) scaleY(1.1);
+    transform: translate(0%, 5%) scaleY(1.1);
+  }
+  50% {
+    -webkit-transform: translate(0%, -37%) scaleY(1.1);
+    transform: translate(0%, -37%) scaleY(1.1);
+  }
+  90% {
+    -webkit-transform: translate(0%, 5%) scaleY(1.1);
+    transform: translate(0%, 5%) scaleY(1.1);
+  }
+  100% {
+    -webkit-transform: translate(0%, 30%) scaleY(0.5);
+    transform: translate(0%, 30%) scaleY(0.5);
+  }
+}
+.ld.ld-bounce {
+  -webkit-animation: ld-bounce 1s infinite;
+  animation: ld-bounce 1s infinite;
+}
+
+/*
+=====================================
+Animate
+=====================================
+*/
+@-webkit-keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInRight {
+    -webkit-animation-name: fadeInRight;
+            animation-name: fadeInRight;
+    -webkit-animation-duration: 900ms;
+            animation-duration: 900ms
+}
+.fadeInRight2 {
+    -webkit-animation-name: fadeInRight;
+            animation-name: fadeInRight;
+    -webkit-animation-duration: 900ms;
+            animation-duration: 900ms
+}
+
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInUp {
+    -webkit-animation-name: fadeInUp;
+            animation-name: fadeInUp;
+    -webkit-animation-duration: 900ms;
+            animation-duration: 900ms
+}
+.fadeInUp2 {
+    -webkit-animation-name: fadeInUp;
+            animation-name: fadeInUp;
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+    -webkit-animation-duration: 900ms;
+            animation-duration: 900ms
+}
+
+@-webkit-keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-70%, 0, 0);
+    transform: translate3d(-70%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-70%, 0, 0);
+    transform: translate3d(-70%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInLeft {
+    -webkit-animation-name: fadeInLeft;
+            animation-name: fadeInLeft;
+    -webkit-animation-duration: 900ms;
+            animation-duration: 900ms
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+    -webkit-animation-name: fadeIn;
+            animation-name: fadeIn;
+    -webkit-animation-duration: 1500ms;
+            animation-duration: 1500ms
+}
+
+/*
+=====================================
+自訂scrollbar
+=====================================
+*/
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px}
+::-webkit-scrollbar-button {
+  width: 0;
+  height: 0}
+::-webkit-scrollbar-thumb {
+  background: #6F87EB;
+  border: 0px none #fff;
+  border-radius: 60px}
+::-webkit-scrollbar-thumb:hover {
+  background: #6F87EB}
+::-webkit-scrollbar-track {
+  background: #3f4c84;
+  border: 0px none #fff;
+  border-radius: 0}
+
+  
+  
+/*
+=====================================s
+頁面設定+RWD
+=====================================
+*/
+@import 'xuePages';
+@import 'xueRwd';
