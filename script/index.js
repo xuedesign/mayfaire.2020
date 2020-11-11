@@ -1,5 +1,5 @@
 //banner
-loadjs('https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js', function() {
+loadjs('https://unpkg.com/flickity/dist/flickity.pkgd.min.js', function() {
     $('.main-carousel').flickity({
         // options
         cellAlign: 'left',
