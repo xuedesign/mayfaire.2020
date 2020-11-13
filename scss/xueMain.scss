@@ -53,9 +53,9 @@ reset重置
 html{ 
   font-size:62.5%; 
   scroll-behavior: smooth;
-  border-top: 5px solid #7D6D58;}
+  border-top: 5px solid #7D6D58}
 body{
-	margin: 0;
+  margin: 0;
 	padding:0;
   background: linear-gradient(180deg, rgb(220, 214, 210) 15%, rgba(220, 214, 210, 0));
   background-attachment: fixed;
@@ -85,14 +85,25 @@ img::-moz-selection { background: transparent}
   margin: 0 auto;
   border: 1px solid rgb(75, 75, 75)}
 
-#wrap,
 header,
-#hdr-fixed,
-#container,
-footer{
+#hdr-fixed{
   @extend %box_default;}
 
+#wrap{
+  @extend %box_default;
+  min-height: calc(100vh - 85px);/*footer高度+最頂端5px裝飾線*/
+}
 
+#container{
+  @extend %box_default;
+  background: #e1e11e1;
+}
+  
+footer{
+  @extend %box_default;
+  min-height: 80px;
+  background: rgb(104, 104, 104);
+}
 
 
 /*
