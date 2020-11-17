@@ -75,30 +75,54 @@ img::-moz-selection { background: transparent}
 
 /*
 =====================================
-網站站結構
+變數
 =====================================
 */
 %box_default{
-  display: block; 
   width: 100%;
   max-width: 1520px;
-  margin: 0 auto;
-  border: 1px solid rgb(75, 75, 75)}
+  margin: 0 auto
+}
+$nav-link: #2E3234;
+$nav-hover: #f50;
 
-header,
-#hdr-fixed{
-  @extend %box_default;}
-
+/*
+=====================================
+網頁主結構
+=====================================
+*/
 #wrap{
   @extend %box_default;
+  display: block;
   min-height: calc(100vh - 85px);/*footer高度+最頂端5px裝飾線*/
+}
+
+header{
+  @extend %box_default;
+  display: block;
+  height: 106px;
+}
+
+#hdr-fixed{
+  @extend %box_default;
+  display: block;
+  position: fixed;
+  height: 106px;
+  z-index: 150;
+}
+
+#hdr-main{
+  @extend %box_default;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 28px
 }
 
 #container{
   @extend %box_default;
   background: #e1e11e1;
 }
-  
+
 footer{
   @extend %box_default;
   min-height: 80px;
@@ -108,25 +132,105 @@ footer{
 
 /*
 =====================================
-頁面設定
+頁首
 =====================================
 */
-/*頁首*/
+h1{
+  display: block;
+  width: 40%
+}
 
+h1 a{
+  display: block;
+  width: 247px;
+  height: 51px;
+  margin: 0 auto;
+  background-image: url(../images/logo.svg);
+  background-repeat: no-repeat;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden}
 
+.hvr-grow {
+  vertical-align: middle;
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  transition-duration: 0.3s;
+  transition-property: transform;
+}
 
-/*版權列*/
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+  transform: scale(1.1);
+}
+
+#main-nav{
+  display: block;
+  width: 42%;
+  padding-top: 19px;
+  text-align: right;
+  border: 1px solid #e1e1e1;
+}
+
+#main-nav ul{
+  width: 100%;
+  vertical-align: middle;
+}
+
+#main-nav li{
+  display: inline-block;
+  margin: 0 40px;
+  font-size: 1.8rem;
+  line-height: 2.6rem;
+}
+
+#main-nav li a{
+  color:$nav-link;
+  text-decoration: none}
+
+#box_lang{
+  display: inline-block;
+  width: 18%;
+  padding-top: 19px;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid #e1e1e1;
+}
+
+#box_lang li{
+  display: inline-block;
+  font-size: 1.8rem;
+  line-height: 2.6rem;
+  padding: 0 5px;
+}
+#box_lang li a{
+  color: $nav-link;
+  text-decoration: none;
+}
+#box_lang li.nowlang a{
+  background: #7e5941;
+  color: #e1e1e1;
+  text-decoration: none;
+  padding: 2px 10px;
+  border-radius: 30px;
+
+}
+#box_lang li:nth-child(2)::after{
+  content: '|';
+  font-size: 1.8rem;
+  color: #2E3234;
+  padding-left: 13px;
+}
 
 
 /*
 =====================================
-選單設定
+頁尾結構
 =====================================
 */
-/*網站主選單*/
-
-
-/*行動版選單*/
 
 
 /*
@@ -457,13 +561,13 @@ Animate
   width: 0;
   height: 0}
 ::-webkit-scrollbar-thumb {
-  background: #6F87EB;
+  background: #7e5941;
   border: 0px none #fff;
   border-radius: 60px}
 ::-webkit-scrollbar-thumb:hover {
-  background: #6F87EB}
+  background: #7e5941}
 ::-webkit-scrollbar-track {
-  background: #3f4c84;
+  background: #35251a;
   border: 0px none #fff;
   border-radius: 0}
 
