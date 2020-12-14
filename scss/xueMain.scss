@@ -81,11 +81,13 @@ img::-moz-selection { background: transparent}
   display: block;
   width: 100%;
 }
+
 %box_content{
   display: block;
   width: 80%;
   margin: 0 auto
 }
+
 $nav-link: #2E3234;
 $nav-hover: #f50;
 
@@ -204,13 +206,14 @@ h1 a{
   text-align: left;
   top: 42px;
   left: -30px;
-  width: 180px;
-  /*background: rgba(0, 0, 0, .5 );*/
-  border-radius: 20px;
+  width: 160px;
+  background: rgba(126, 89, 65, 0.5);
+  border-radius: 10px;
   padding: 10px 0;
 }
 
 #main-nav ul li li a{
+  color: #fff;
 }
   
 
