@@ -34,7 +34,7 @@
 
 /*
 =====================================
-reset重置
+引入外部文件
 =====================================
 */
 @import url("reset.css");
@@ -43,7 +43,7 @@ reset重置
   font-family: SweiBowLegCJKtc-Regular;
   src: url(https://cdn.jsdelivr.net/gh/max32002/swei-bow-leg@2.129/WebFont/CJK%20TC/SweiBowLegCJKtc-Regular.woff2) format("woff2")
   , url(https://cdn.jsdelivr.net/gh/max32002/swei-bow-leg@2.129/WebFont/CJK%20TC/SweiBowLegCJKtc-Regular.woff) format("woff")}
-@import url("https://pro.fontawesome.com/releases/v5.15.1/css/all.css");
+@import url("https://pro.fontawesome.com/releases/v5.15.2/css/all.css");
 
 /*
 =====================================s
@@ -82,8 +82,15 @@ img::-moz-selection { background: transparent}
   width: 100%;
 }
 
-%box_content{
+%content_block{
   display: block;
+  width: 80%;
+  margin: 0 auto
+}
+
+%content_flex{
+  display: flex;
+  flex-wrap: wrap;
   width: 80%;
   margin: 0 auto
 }
@@ -118,14 +125,16 @@ header{
 }
 
 #container{
-  @extend %box_content;
-  background: rgb(139, 131, 131);
+  @extend %content_block;
+  padding-bottom: 50px
 }
 
 footer{
-  @extend %box_content;
+  @extend %content_flex;
+  justify-content:space-between;
   min-height: 80px;
-  background: rgb(104, 104, 104);
+  border-top: 1px solid #B8B2AC;
+  padding: 20px 15px 0;
 }
 
 
@@ -137,9 +146,7 @@ footer{
 h1{
   display: block;
   width: 20%;
-  border: 1px solid #e1e1e1;
 }
-
 h1 a{
   display: block;
   width: 247px;
@@ -158,7 +165,7 @@ h1 a{
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   backface-visibility: hidden;
   -moz-osx-font-smoothing: grayscale;
-  transition-duration: 0.3s;
+  transition-duration: 0.5s;
   transition-property: transform;
 }
 
@@ -173,30 +180,24 @@ h1 a{
   display: block;
   width: 62%;
   text-align: right;
-  border: 1px solid #e1e1e1;
 }
-
 #main-nav ul{
   width: 100%;
   vertical-align: middle;
 }
-
 #main-nav li{
   display: inline-block;
   margin: 0 40px;
   font-size: 1.8rem;
   line-height: 4rem;
 }
-
 #main-nav li:nth-child(3){
   position: relative;
 }
-
 #main-nav li a{
   color:$nav-link;
   text-decoration: none
 }
-
 #main-nav ul ul{
   display: none;
 }
@@ -211,16 +212,12 @@ h1 a{
   border-radius: 10px;
   padding: 10px 0;
 }
-
 #main-nav ul li li a{
   color: #fff;
 }
-  
-
 .nowin{
   border-bottom: 3px solid #694228;
 }
-
 
 /*網站語系*/
 #box_lang{
@@ -229,7 +226,6 @@ h1 a{
   padding-top: 10px;
   text-align: center;
   vertical-align: middle;
-  border: 1px solid #e1e1e1;
 }
 #box_lang li{
   display: inline-block;
@@ -261,7 +257,14 @@ h1 a{
 頁尾結構
 =====================================
 */
-
+footer h3{
+  font-size: 2rem;
+  color:#929699;
+}
+footer p{
+  font-size: 1.5rem;
+  color:#929699
+}
 
 /*
 =====================================
