@@ -31,15 +31,5 @@ loadjs(['script/lib/jquery.ui.totop.min.js', 'https://cdn.jsdelivr.net/npm/jquer
     });
 });
 
-// outside link
-function externalLinks() { 
-    if (!document.getElementsByTagName) return; 
-    var anchors = document.getElementsByTagName("a"); 
-    for (var i=0; i<anchors.length; i++) { 
-      var anchor = anchors[i]; 
-      if (anchor.getAttribute("href") && 
-          anchor.getAttribute("rel") == "external") 
-        anchor.target = "_blank"; 
-    } 
-   } 
-   window.onload = externalLinks;
+//fancybox
+loadjs(['https://cdn.jsdelivr.net/gh/fancyapps/fancybox/dist/jquery.fancybox.min.css', 'https://cdn.jsdelivr.net/gh/fancyapps/fancybox/dist/jquery.fancybox.min.js']); 

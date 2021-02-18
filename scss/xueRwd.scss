@@ -32,6 +32,10 @@
 **/
 
 @media (max-width:1400px) {
+%content_block{
+    width: 90%}
+%content_flex{
+    width: 90%}
 #main-nav li{ margin: 0 30px}
 
 }
@@ -42,12 +46,8 @@
 =====================================
 */
 @media (max-width:1110px) { /*1000*/
-%content_block{
-    width: 90%}
-%content_flex{
-    width: 90%}
-#main-nav,
-#box_lang{ display: none;}
+#box_lang,
+#main-nav{ display: none}
 
 
 }
@@ -58,6 +58,7 @@
 =====================================
 */
 @media (max-width:800px) { /*750*/
+
  
 }
 
