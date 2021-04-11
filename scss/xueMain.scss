@@ -67,8 +67,8 @@ image{border:0}
 .hidden{ display:none}
 
 /*頁面反白設定*/
-::selection { background: #7D6D58; color: #D8D9D4}
-::-moz-selection { background: #7D6D58; color: #D8D9D4}
+::selection { background: #7e5941; color: #D8D9D4}
+::-moz-selection { background: #7e5941; color: #D8D9D4}
 img::selection { background: transparent}
 img::-moz-selection { background: transparent}
 
@@ -466,15 +466,14 @@ overlay menu
   overflow: hidden;
 }
 
-.lightbox-target .content {
+.lightbox-target .content{
   display: flex;
   flex-direction: column;
-  justify-content:space-around;
-  width: 85%;
-  height: 85%;
-  margin: 5% auto;
-  /* border: 3px solid #f0d6b5; */
-  border-radius: 15px;
+  justify-content: center;
+  align-items: center; 
+  width: 90%;
+  height: 90%;
+  margin: 0 auto;
   box-sizing: border-box;
   -moz-transition: ease-in-out 0.5s;
   -o-transition: ease-in-out 0.5s;
@@ -494,22 +493,28 @@ overlay menu
   max-width: 100%;
 }
 
-.lightbox-target .content li{
-  font-family: SweiBowLegCJKtc-Regular;
-  font-size:4rem;
-  line-height: 3rem;
-  text-align: center;
+.lightbox-target .content ul{
+  margin: 4% 0;
 }
 
-.lightbox-target .content ul{
-  padding: 4% 0;
+.lightbox-target .content li{
+  display: block;
+  min-height:80px;
+  font-family: SweiBowLegCJKtc-Regular;
+  font-size: 3.5rem;
+  line-height: 3rem;
+  letter-spacing: 1px;
+  text-align: center;
+  margin: 2% 0
 }
 
 .lightbox-target .content li li{
   display: inline-block;
-  margin: 10px 0;
-  font-size: 3rem;
+  font-size: 2rem;
+  line-height: 3rem;
   letter-spacing: 1px;
+  padding: 0;
+  margin: 10px 0 0;
 }
 
 .lightbox-target .content li li::after{
@@ -518,15 +523,15 @@ overlay menu
   padding: 0 8px;
 }
 
-.lightbox-target .content li li:nth-child(3):after{
+.lightbox-target .content .last-nav:after{
   content: "";
 }
-
 
 .lightbox-target .content a{
   color: #f0d6b5;
   text-decoration: none;
 }
+
 .lightbox-target .content a:hover{}
 .lightbox-target .content a:visited{
   color: #f0d6b5;
@@ -550,6 +555,7 @@ overlay menu
   -webkit-transition: ease-in-out 0.5s;
   transition: ease-in-out 0.5s;
 }
+
 .lightbox-close::before, 
 .lightbox-close::after{
   content: " ";
@@ -565,6 +571,7 @@ overlay menu
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
+
 .lightbox-close::after {
   -moz-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
@@ -572,7 +579,6 @@ overlay menu
   transform: rotate(-45deg);
 }
 
-  
   
 /*
 =====================================s
