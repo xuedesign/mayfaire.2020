@@ -119,6 +119,7 @@ header{
 #hdr-main{
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   width: 80%;
   margin: 0 auto;
   padding-top: 28px
@@ -143,15 +144,10 @@ footer{
 頁首
 =====================================
 */
-h1{
-  display: block;
-  width: 20%;
-}
 h1 a{
   display: block;
-  width: 247px;
+  width: 300px;
   height: 51px;
-  margin: 0 auto;
   background-image: url(../images/logo.svg);
   background-repeat: no-repeat;
   text-indent: 100%;
@@ -178,7 +174,7 @@ h1 a{
 /*主選單*/
 #main-nav{
   display: block;
-  width: 62%;
+  width: 65%;
   text-align: right;
 }
 #main-nav ul{
@@ -222,7 +218,7 @@ h1 a{
 /*網站語系*/
 #box_lang{
   display: inline-block;
-  width: 18%;
+  /* width: 15%; */
   padding-top: 10px;
   text-align: center;
   vertical-align: middle;
@@ -449,15 +445,15 @@ Animate
 overlay menu
 =====================================
 */
-.btn_mobilenav{
-  display: none;
-}
+#box_mobilenav{
+  display: none}
+
 /*選單樣式*/
 .lightbox-target{
   position: fixed;
-  top: -100%;
+  top: -150%;
   width: 100%;
-  background: linear-gradient(180deg, rgba(143, 94, 59, 0.8) 0%, rgba(66, 44, 28, 0.8) 100%);
+  background: linear-gradient(180deg, rgba(143, 94, 59, 1) 0%, rgba(66, 44, 28, 1) 100%);
   opacity: 0;
   -moz-transition: opacity 0.5s ease-in-out;
   -o-transition: opacity 0.5s ease-in-out;
@@ -469,19 +465,19 @@ overlay menu
 .lightbox-target .content{
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center; 
   width: 90%;
-  height: 90%;
-  margin: 0 auto;
+  /* height: 90%; */
+  margin: 15% auto;
   box-sizing: border-box;
   -moz-transition: ease-in-out 0.5s;
   -o-transition: ease-in-out 0.5s;
   -webkit-transition: ease-in-out 0.5s;
-  transition: ease-in-out 0.5s
+  transition: ease-in-out 0.5s;
 }
 
-.lightbox-target:target {
+.lightbox-target:target{
   opacity: 1;
   top: 0;
   bottom: 0

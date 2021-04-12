@@ -31,15 +31,19 @@
 *
 **/
 
-@media (max-width:1400px) {
+@media (max-width:1700px) {
 #hdr-main{ 
     width: 90%}    
 %content_block{
     width: 90%}
 %content_flex{
     width: 90%}
+#main-nav{ width: 60%}
 #main-nav li{ margin: 0 30px}
+}
 
+@media (max-width:1300px) {
+    #main-nav{ width: 54%}
 }
 
 /*
@@ -49,9 +53,12 @@
 */
 @media (max-width:1110px) { /*1000*/
 #box_lang,
-#main-nav{ display: none}
-#hdr-main{
-    justify-content: space-between}
+#main-nav{ display: none}    
+#hdr-main{ justify-content: space-between}
+/* h1{ width: 80%}    */
+#box_mobilenav{
+    display: block;
+    width: 19%}    
 .btn_mobilenav{
     display: block;
     width: 50px;
@@ -117,8 +124,8 @@ footer p{ padding-bottom: 15px}
 @media (max-width: 420px) { /*360*/
 header{ height:95px}
 h1 a{
-    width: 180px;
-    height: 37px;
+    width: 199px;
+    height: 41px;
     background-size: cover}
 footer p{ line-height: 2.1rem}
 .btn_mobilenav,
@@ -138,8 +145,7 @@ footer p{ line-height: 2.1rem}
 }
 
 .lightbox-target .content{
-    height: 75%;
-    margin-top: 30%;
+    margin-top: 15%;
 }
 .lightbox-target .content li{
     font-size:3rem;
@@ -165,6 +171,19 @@ footer p{ line-height: 2.1rem}
 @media (max-width: 321px) { /*300*/
 .lightbox-target .content li li::after{
     padding: 0 4px;
-    }
+}
+
+.lightbox-target .content{
+    margin-top: 10%;
+    height: 80%}
+
+.lightbox-target .content li{
+    font-size: 2.5rem;
+    line-height: 2rem
+}
+
+.lightbox-target .content li li{
+    font-size: 1.8rem   
+}
     
 }
