@@ -1,0 +1,21 @@
+{
+    "name": "梅斐國際有限公司 Mayfaire International Co., Ltd.",
+    "short_name": "梅斐國際",
+    "description": " 梅斐國際有限公司提供ODM、OEM的服務，從設計、開發、打樣、生產等一條龍服務。",
+    "icons" : [
+        {
+            "src": "/images/logo-192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "/images/logo-512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],
+    "start_url": "https://www.mayfaire.com.tw/index.html?utm_source=PWA",
+    "theme_color": "#CFBBA2",
+    "background_color": "#CFBBA2",
+    "display": "standalone"
+}
