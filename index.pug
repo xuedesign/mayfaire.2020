@@ -1,6 +1,6 @@
 doctype html
 html(lang="zh-Hant" class="no-js")
-  head
+	head
 		meta(charset="UTF-8")
 		meta(name="viewport" content="width=device-width, height=device-height, initial-scale=1.0")
 		meta(http-equiv="X-UA-Compatible" content="IE=edge")
@@ -22,98 +22,123 @@ html(lang="zh-Hant" class="no-js")
 		title 質感家居生活，梅斐為你實現
 		link(rel="stylesheet" href="css/xueMain.css")
 		link(rel="manifest" href="manifest.json")
-    
-  = '\n'
-  body
-    noscript
-			iframe(src='https://www.googletagmanager.com/ns.html?id=GTM-PDTN4XW', height='0', width='0', style='display:none;visibility:hidden')
-    = '\n'
-    
-    header
-			#hdr-main
-				h1
+	= '\n'
+
+	body
+		#wrap
+			header 
+				#hdr-main
+					h1
 						a.hvr-grow(href='index.html', title='返回首頁') 梅斐國際 Mayfaire
-				= '\n'
+					= '\n'
 
-        nav#main-nav
-            ul
-                li.hvr-grow.nowin
-                    a(href="index.html" title="首頁") 首頁
-                li.hvr-grow
-                    a(href="tw/about.html" title="關於梅斐") 關於梅斐
-                li.hvr-grow
-                    a(href="tw/lighting.html" title="產品介紹") 產品介紹
-                    ul
-                        li
-                            a(href="tw/lighting.html" title="燈具") 燈具
-                        li
-                            a(href="tw/furniture.html" title="傢俱") 傢俱
-                        li
-                            a(href="tw/lifestyle.html" title="生活精品") 生活精品
-                li.hvr-grow
-                    a(href="tw/contact.html" title="聯絡我們") 聯絡我們
-        = '\n'
-            
-        ul#box_lang
-            li
-                i.fal.fa-globe
-            li.nowlang
-                a(href="index.html" title="現在是中文版網站") 中文
-            li
-                a(href="index-en.html" title="前往英文版網站") EN
-    = '\n'
+					nav#main-nav
+						ul
+							li.hvr-grow.nowin
+								a(href="index.html" title="首頁") 首頁
+							li.hvr-grow
+								a(href="tw/about.html" title="關於梅斐") 關於梅斐
+							li.hvr-grow
+								a(href="tw/lighting.html" title="產品介紹") 產品介紹
+								ul
+									li
+											a(href="tw/lighting.html" title="燈具") 燈具
+									li
+											a(href="tw/furniture.html" title="傢俱") 傢俱
+									li
+											a(href="tw/lifestyle.html" title="生活精品") 生活精品
+							li.hvr-grow
+								a(href="tw/contact.html" title="聯絡我們") 聯絡我們
+					= '\n'
 
-    main
-      
-    = '\n'  
+					ul#box_lang
+						li
+							i.fal.fa-globe
+						li.nowlang
+							a(href="index.html" title="現在是中文版網站") 中文
+						li
+							a(href="index-en.html" title="前往英文版網站") EN
+			= '\n'
 
-    footer
-        h3 梅斐國際有限公司 Mayfairee
-        p &copy; Mayfaire International Co., Ltd., All rights reserved.
-    = '\n'
+			main#container(style="min-height:1000px; background: #e1e1e1;")
 
-    script.
-        document.documentElement.classList.remove("no-js");
-    script(src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js")
-    script(src="https://cdn.jsdelivr.net/npm/jquery-migrate/dist/jquery-migrate.min.js")
-    script(src="https://cdn.jsdelivr.net/npm/loadjs/dist/loadjs.umd.min.js")
-    script(src="script/index.js")
-    script(src="https://instant.page/5.1.0")
-    script(type='application/ld+json').
-        {
-        "@context" : "https://schema.org",
-        "@type" : "Organization",
-        "name" : "梅斐國際有限公司 Mayfaire International Co., Ltd.",
-        "url" : "https://www.mayfaire.com.tw/"
-        "contactPoint" : [ {
-        "@type" : "ContactPoint",
-        "telephone" : "+886-2-2891-5451",
-        "contactType" : "customer service" } ]
-        }
+			= '\n'
+		= '\n'
+		
+		footer
+			h3 梅斐國際有限公司 Mayfairee
+			p &copy; Mayfaire International Co., Ltd., All rights reserved.
+		= '\n'
 
-= '\n'
-//
-  Created By
-       ##############               ###############   
-        ##############             ###############    
-        ##############             ##############     
-         ##############           ##############      
-          ##############          #############       
-           #############         ##############       
-            #############       ##############        
-            ##############      #############         
-             ###############################          
-             ###############################          
-            #################################         
-            ##############     ##############         
-           ##############       ##############        
-           ##############        ##############       
-          ##############         #######           
-         ###############          ##############      
-         ##############           ###############     
-        ######      
-        ##############              ##############    
-       ##############               ##############
-              
-                     xuedesign studio 
-                 https://www.xuedesign.tw/
+		#MobileNav.lightbox-target
+			ul.content
+				li
+					a(href='tw/about.html', title='關於梅斐') 關於梅斐
+				li
+					a(href='#', title='產品介紹') 產品介紹
+					ul
+						li
+							a(href='tw/lighting.html', title='燈具') 燈具
+						li
+							a(href='tw/furniture.html', title='傢俱') 傢俱
+						li.last-nav
+							a(href='tw/lifestyle.html', title='生活精品') 生活精品
+				li
+					a(href='tw/contact.html', title='聯絡我們') 聯絡我們
+				li
+					a(href='index.html', title='返回首頁') 返回首頁
+				li
+					a(href='#', title='網站語系') 網站語系
+					ul 
+						li
+							a(href='index.html', title='中文') 中文
+						li.last-nav
+							a(href='index-en.html', title='英文') En
+			a.lightbox-close(href='#')
+		= '\n'
+
+		script.
+				document.documentElement.classList.remove("no-js");
+		script(src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js")
+		script(src="https://cdn.jsdelivr.net/npm/jquery-migrate/dist/jquery-migrate.min.js")
+		script(src="https://cdn.jsdelivr.net/npm/loadjs/dist/loadjs.umd.min.js")
+		script(src="script/index.js")
+		script(src="https://instant.page/5.1.0")
+		script(type='application/ld+json').
+			{
+			"@context" : "https://schema.org",
+			"@type" : "Organization",
+			"name" : "梅斐國際有限公司 Mayfaire International Co., Ltd.",
+			"url" : "https://www.mayfaire.com.tw/"
+			"contactPoint" : [ {
+			"@type" : "ContactPoint",
+			"telephone" : "+886-2-2891-5451",
+			"contactType" : "customer service" } ]
+			}
+	= '\n'
+
+	//
+		Created By
+				##############               ###############   
+					##############             ###############    
+					##############             ##############     
+					##############           ##############      
+						##############          #############       
+						#############         ##############       
+							#############       ##############        
+							##############      #############         
+							###############################          
+							###############################          
+							#################################         
+							##############     ##############         
+						##############       ##############        
+						##############        ##############       
+						##############         #######           
+					###############          ##############      
+					##############           ###############     
+					######      
+					##############              ##############    
+				##############               ##############
+								
+											xuedesign studio 
+									https://www.xuedesign.tw/
