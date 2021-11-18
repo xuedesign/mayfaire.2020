@@ -22,16 +22,29 @@ html(lang="zh-Hant" class="no-js")
 		title 質感家居生活，梅斐為你實現
 		link(rel="stylesheet" href="css/xueMain.css")
 		link(rel="manifest" href="manifest.json")
-	= '\n'
+		script. 
+			(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+			new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+			j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+			'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+			})(window,document,'script','dataLayer','GTM-PDTN4XW');
+		= '\n'
 
 	body
+		noscript
+			iframe(src="https://www.googletagmanager.com/ns.html?id=GTM-PDTN4XW"
+			height="0" width="0" style="display:none;visibility:hidden")
+		= '\n'	
+
 		#wrap
-			header 
+			header
+				//- 頂端列 
 				#hdr-main
 					h1
 						a.hvr-grow(href='index.html', title='返回首頁') 梅斐國際 Mayfaire
 					= '\n'
 
+					//- 主選單
 					nav#main-nav
 						ul
 							li.hvr-grow.nowin
@@ -49,8 +62,8 @@ html(lang="zh-Hant" class="no-js")
 											a(href="tw/lifestyle.html" title="生活精品") 生活精品
 							li.hvr-grow
 								a(href="tw/contact.html" title="聯絡我們") 聯絡我們
-					= '\n'
 
+					//- 語系選單
 					ul#box_lang
 						li
 							i.fal.fa-globe
@@ -58,18 +71,25 @@ html(lang="zh-Hant" class="no-js")
 							a(href="index.html" title="現在是中文版網站") 中文
 						li
 							a(href="index-en.html" title="前往英文版網站") EN
+					
+					//- 行動版選單按鈕
+					#box_mobilenav
+						a(href="#MobileNav" class="btn_mobilenav") 網站選單
 			= '\n'
 
+			//- 主要內容區塊
 			main#container(style="min-height:1000px; background: #e1e1e1;")
 
-			= '\n'
-		= '\n'
+			//- 主要內容區塊結束
+		= '\n' 
 		
+		//- 版權列
 		footer
 			h3 梅斐國際有限公司 Mayfairee
 			p &copy; Mayfaire International Co., Ltd., All rights reserved.
 		= '\n'
 
+		//- 行動版選單
 		#MobileNav.lightbox-target
 			ul.content
 				li
@@ -97,8 +117,9 @@ html(lang="zh-Hant" class="no-js")
 			a.lightbox-close(href='#')
 		= '\n'
 
+		//- script區塊
 		script.
-				document.documentElement.classList.remove("no-js");
+			document.documentElement.classList.remove("no-js");
 		script(src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js")
 		script(src="https://cdn.jsdelivr.net/npm/jquery-migrate/dist/jquery-migrate.min.js")
 		script(src="https://cdn.jsdelivr.net/npm/loadjs/dist/loadjs.umd.min.js")
@@ -115,30 +136,30 @@ html(lang="zh-Hant" class="no-js")
 			"telephone" : "+886-2-2891-5451",
 			"contactType" : "customer service" } ]
 			}
-	= '\n'
+= '\n'
 
-	//
-		Created By
-				##############               ###############   
-					##############             ###############    
-					##############             ##############     
-					##############           ##############      
-						##############          #############       
-						#############         ##############       
-							#############       ##############        
-							##############      #############         
-							###############################          
-							###############################          
-							#################################         
-							##############     ##############         
-						##############       ##############        
-						##############        ##############       
-						##############         #######           
-					###############          ##############      
-					##############           ###############     
-					######      
-					##############              ##############    
-				##############               ##############
-								
-											xuedesign studio 
-									https://www.xuedesign.tw/
+//
+	Created By
+			##############               ###############   
+				##############             ###############    
+				##############             ##############     
+				##############           ##############      
+					##############          #############       
+					#############         ##############       
+						#############       ##############        
+						##############      #############         
+						###############################          
+						###############################          
+						#################################         
+						##############     ##############         
+					##############       ##############        
+					##############        ##############       
+					##############         #######           
+				###############          ##############      
+				##############           ###############     
+				######      
+				##############              ##############    
+			##############               ##############
+							
+										xuedesign studio 
+								https://www.xuedesign.tw/
