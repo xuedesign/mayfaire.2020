@@ -1,4 +1,4 @@
-const cacheVersion = 'v202112';
+const cacheVersion = 'v2022';
 const filesToCache = [
   '/?utm_source=PWA',
   '/css',

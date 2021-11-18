@@ -35,7 +35,7 @@ loadjs(['script/lib/jquery.ui.totop.min.js', 'https://cdn.jsdelivr.net/npm/jquer
 });
 
 //fancybox
-loadjs(['https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css', 'https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js']); 
+loadjs(['https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0.9/dist/fancybox.css', 'https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0.9/dist/fancybox.umd.js']); 
 
 //PWA
 if ('serviceWorker' in navigator) {
